@@ -13,6 +13,7 @@ export default function PagintationButtons({ loadedGnomes, currentPage, gnomesPe
   return (
     <>
       <button
+        data-testid="prev-button"
         disabled={currentPage === 1}
         type="button"
         onClick={() => handlePaginationClick('prev')}
@@ -20,6 +21,7 @@ export default function PagintationButtons({ loadedGnomes, currentPage, gnomesPe
         Prev
       </button>
       <button
+        data-testid="next-button"
         disabled={!loadedGnomes[(currentPage + 1) * gnomesPerPage]}
         type="button"
         onClick={() => handlePaginationClick('next')}

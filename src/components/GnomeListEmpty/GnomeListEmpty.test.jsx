@@ -3,7 +3,7 @@ import { render, screen } from '../../utils/testutils';
 
 import GnomeListEmtpy from './GnomeListEmpty';
 
-describe('Given a GnomeCard component', () => {
+describe('Given a GnomeListEmpty component', () => {
   describe('When is rendered', () => {
     render(<GnomeListEmtpy />);
   });

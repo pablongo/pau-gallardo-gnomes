@@ -3,7 +3,7 @@ import { render, screen } from '../../utils/testutils';
 
 import GnomeList from './GnomeList';
 
-describe('Given a GnomeCard component', () => {
+describe('Given a GnomeList component', () => {
   describe('When is rendered', () => {
     beforeEach(() => {
       const loadedGnomes = [{
