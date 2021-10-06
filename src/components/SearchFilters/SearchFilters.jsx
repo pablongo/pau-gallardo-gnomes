@@ -19,11 +19,13 @@ export default function SearchFilters() {
   return (
     <>
       <input
+        data-testid="filter-input"
         type="text"
         placeholder="Search Gnomes..."
         onChange={handleInputChange}
       />
       <button
+        data-testid="search-button"
         type="button"
         onClick={() => handleSearch(inputValue)}
       >
