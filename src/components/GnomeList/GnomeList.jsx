@@ -5,6 +5,8 @@ import { useSelector } from 'react-redux';
 import GnomeCard from '../GnomeCard/GnomeCard';
 import PagintationButtons from '../PaginationButtons/PaginationButtons';
 
+import './GnomeList.scss';
+
 export default function GnomeList({ loadedGnomes }) {
   const { currentPage, gnomesPerPage } = useSelector((store) => store.pagination);
 
@@ -16,7 +18,7 @@ export default function GnomeList({ loadedGnomes }) {
   return (
     <>
       <h1>This is GnomeList</h1>
-      <ul>
+      <ul className="gnome-list-container">
         {
           shownGnomes.map((gnome) => (
             <GnomeCard key={gnome.name} gnome={gnome} />
