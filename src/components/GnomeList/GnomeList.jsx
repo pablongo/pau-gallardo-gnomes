@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import { PropTypes } from 'prop-types';
 import { useSelector } from 'react-redux';
 
 import GnomeCard from '../GnomeCard/GnomeCard';
@@ -38,3 +38,7 @@ export default function GnomeList({ loadedGnomes }) {
     </>
   );
 }
+
+GnomeList.propTypes = {
+  loadedGnomes: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
