@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import { PropTypes } from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import './GnomeCard.scss';
@@ -14,3 +14,17 @@ export default function GnomeCard({ gnome }) {
     </Link>
   );
 }
+
+GnomeCard.propTypes = {
+  gnome: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    thumbnail: PropTypes.string,
+    age: PropTypes.number,
+    weight: PropTypes.number,
+    height: PropTypes.number,
+    hair_color: PropTypes.string,
+    professions: PropTypes.arrayOf(PropTypes.string),
+    friends: PropTypes.arrayOf(PropTypes.string),
+  }).isRequired,
+};
