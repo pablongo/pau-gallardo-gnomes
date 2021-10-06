@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import { PropTypes } from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { changePage } from '../../redux/actions/actionsCreator';
 
@@ -29,3 +29,9 @@ export default function PagintationButtons({ loadedGnomes, currentPage, gnomesPe
     </>
   );
 }
+
+PagintationButtons.propTypes = {
+  loadedGnomes: PropTypes.arrayOf(PropTypes.object).isRequired,
+  currentPage: PropTypes.number.isRequired,
+  gnomesPerPage: PropTypes.number.isRequired,
+};
