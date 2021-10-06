@@ -7,7 +7,7 @@ export function loadGnomes() {
     try {
       dispatch({
         type: actionTypes.LOAD_GNOMES,
-        data,
+        data: data.Brastlewark,
       });
     } catch (error) {
       dispatch({
