@@ -3,13 +3,15 @@ import React from 'react';
 
 export default function GnomeCard({ gnome }) {
   return (
-    <li>
-      <h3>{gnome?.name}</h3>
-      <div>
-        <picture>
-          <img src="" alt="" />
-        </picture>
-      </div>
-    </li>
+    <>
+      <li>
+        <h3>{gnome?.name}</h3>
+        <div>
+          <picture>
+            <img src={gnome.thumbnail} alt="" />
+          </picture>
+        </div>
+      </li>
+    </>
   );
 }

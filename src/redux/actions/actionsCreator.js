@@ -18,6 +18,34 @@ export function loadGnomes() {
   };
 }
 
-export function loadGnomess() {
-  return '';
+export function changePage(direction, currentPage, gnomesPerPage) {
+  let pagination = {};
+  switch (direction) {
+    case 'prev':
+      if (currentPage > 1) {
+        pagination = {
+          currentPage: currentPage - 1,
+          gnomesPerPage,
+        };
+      }
+      break;
+
+    case 'next':
+      pagination = {
+        currentPage: currentPage + 1,
+        gnomesPerPage,
+      };
+      break;
+
+    default:
+      pagination = {
+        currentPage,
+        gnomesPerPage,
+      };
+      break;
+  }
+  return ({
+    type: actionTypes.SET_PAGINATION,
+    pagination,
+  });
 }

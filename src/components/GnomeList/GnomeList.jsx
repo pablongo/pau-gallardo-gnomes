@@ -1,11 +1,13 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 import GnomeCard from '../GnomeCard/GnomeCard';
+import PagintationButtons from '../PaginationButtons/PaginationButtons';
 
 export default function GnomeList({ loadedGnomes }) {
-  const currentPage = 1;
-  const gnomesPerPage = 20;
+  const { currentPage, gnomesPerPage } = useSelector((store) => store.pagination);
+
   const indexLastGnome = currentPage * gnomesPerPage;
   const indexFirstGnome = indexLastGnome - gnomesPerPage;
 
@@ -14,11 +16,14 @@ export default function GnomeList({ loadedGnomes }) {
   return (
     <>
       <h1>This is GnomeList</h1>
-      {
+      <ul>
+        {
           shownGnomes.map((gnome) => (
-            <GnomeCard gnome={gnome} />
+            <GnomeCard key={gnome.name} gnome={gnome} />
           ))
-      }
+        }
+      </ul>
+      <PagintationButtons currentPage={currentPage} gnomesPerPage={gnomesPerPage} />
     </>
   );
 }
