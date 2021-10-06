@@ -23,7 +23,7 @@ export default function GnomeList({ loadedGnomes }) {
         currentPage={currentPage}
         gnomesPerPage={gnomesPerPage}
       />
-      <ul className="gnome-list-container">
+      <ul data-testid="gnome-list" className="gnome-list-container">
         {
           shownGnomes.map((gnome) => (
             <GnomeCard key={gnome.name} gnome={gnome} />
