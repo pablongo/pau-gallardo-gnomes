@@ -4,12 +4,14 @@ import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import configureStore from './redux/store';
 
+import Dashboard from './pages/Dashboard/Dashboard';
+
 import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={configureStore()}>
-      <h1>Index</h1>
+      <Dashboard />
     </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
