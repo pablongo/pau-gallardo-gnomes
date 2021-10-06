@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { filterGnomes } from '../../redux/actions/actionsCreator';
 
 export default function SearchFilters() {
+  const allGnomes = useSelector(({ staticGnomes }) => staticGnomes);
   const dispatch = useDispatch();
   const [inputValue, setInputValue] = useState('');
 
@@ -11,7 +12,7 @@ export default function SearchFilters() {
   }
 
   function handleSearch(searchValue) {
-    dispatch(filterGnomes(searchValue));
+    dispatch(filterGnomes(searchValue, allGnomes));
   }
 
   return (

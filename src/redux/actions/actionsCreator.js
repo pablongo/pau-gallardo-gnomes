@@ -55,9 +55,10 @@ export function changePage(direction, currentPage, gnomesPerPage) {
   });
 }
 
-export function filterGnomes(searchValue) {
+export function filterGnomes(searchValue, allGnomes) {
   return ({
     type: actionTypes.FILTER_GNOMES,
     searchValue,
+    allGnomes,
   });
 }

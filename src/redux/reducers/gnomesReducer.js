@@ -8,7 +8,7 @@ export default function gnomesReducer(gnomesList = [], action) {
       break;
 
     case actionTypes.FILTER_GNOMES:
-      newGnomesList = gnomesList.filter((gnome) => (
+      newGnomesList = action.allGnomes.filter((gnome) => (
         gnome.name.toLowerCase().includes(action.searchValue.trim())
       ));
       break;
