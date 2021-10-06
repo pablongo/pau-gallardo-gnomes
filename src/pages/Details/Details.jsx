@@ -32,7 +32,7 @@ export default function Details() {
         <h3>Professions:</h3>
         <ul>
           {gnome.professions.map((profession) => (
-            <li>{profession}</li>
+            <li key={profession}>{profession}</li>
           ))}
         </ul>
       </div>
@@ -40,7 +40,7 @@ export default function Details() {
         <h3>Friends:</h3>
         <ul>
           {gnome.friends.map((friend) => (
-            <li>{friend}</li>
+            <li key={friend}>{friend}</li>
           ))}
         </ul>
       </div>
