@@ -10,7 +10,7 @@ export default function SearchResultContainer({ loadedGnomes }) {
       <h2>Gnomes</h2>
       {
       loadedGnomes.length
-        ? <GnomeList />
+        ? <GnomeList loadedGnomes={loadedGnomes} />
         : <GnomeListEmpty />
       }
     </section>
