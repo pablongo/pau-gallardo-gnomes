@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { filterGnomes } from '../../redux/actions/actionsCreator';
+import { filterGnomes, changePage } from '../../redux/actions/actionsCreator';
 
 export default function SearchFilters() {
   const allGnomes = useSelector(({ staticGnomes }) => staticGnomes);
@@ -8,10 +8,11 @@ export default function SearchFilters() {
   const [inputValue, setInputValue] = useState('');
 
   function handleInputChange({ target: { value } }) {
-    setInputValue(value);
+    setInputValue(value.toLowerCase().trim());
   }
 
   function handleSearch(searchValue) {
+    dispatch(changePage('reset', 1, 20));
     dispatch(filterGnomes(searchValue, allGnomes));
   }
 

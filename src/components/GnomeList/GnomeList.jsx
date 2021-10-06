@@ -18,7 +18,11 @@ export default function GnomeList({ loadedGnomes }) {
   return (
     <>
       <h1>This is GnomeList</h1>
-      <PagintationButtons currentPage={currentPage} gnomesPerPage={gnomesPerPage} />
+      <PagintationButtons
+        loadedGnomes={loadedGnomes}
+        currentPage={currentPage}
+        gnomesPerPage={gnomesPerPage}
+      />
       <ul className="gnome-list-container">
         {
           shownGnomes.map((gnome) => (
@@ -26,7 +30,11 @@ export default function GnomeList({ loadedGnomes }) {
           ))
         }
       </ul>
-      <PagintationButtons currentPage={currentPage} gnomesPerPage={gnomesPerPage} />
+      <PagintationButtons
+        loadedGnomes={loadedGnomes}
+        currentPage={currentPage}
+        gnomesPerPage={gnomesPerPage}
+      />
     </>
   );
 }

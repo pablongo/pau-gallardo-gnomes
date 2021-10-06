@@ -22,17 +22,10 @@ export function changePage(direction, currentPage, gnomesPerPage) {
   let pagination = {};
   switch (direction) {
     case 'prev':
-      if (currentPage > 1) {
-        pagination = {
-          currentPage: currentPage - 1,
-          gnomesPerPage,
-        };
-      } else {
-        pagination = {
-          currentPage,
-          gnomesPerPage,
-        };
-      }
+      pagination = {
+        currentPage: currentPage - 1,
+        gnomesPerPage,
+      };
       break;
 
     case 'next':
