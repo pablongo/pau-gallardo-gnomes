@@ -54,3 +54,10 @@ export function changePage(direction, currentPage, gnomesPerPage) {
     pagination,
   });
 }
+
+export function filterGnomes(searchValue) {
+  return ({
+    type: actionTypes.FILTER_GNOMES,
+    searchValue,
+  });
+}

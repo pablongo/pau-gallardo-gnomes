@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { loadGnomes } from '../../redux/actions/actionsCreator';
 
 import SearchResultContainer from '../../components/SearchGnomesContainer/SearchResultContainer';
+import SearchFilters from '../../components/SearchFilters/SearchFilters';
 
 export default function Dashboard() {
   const dispatch = useDispatch();
@@ -14,6 +15,9 @@ export default function Dashboard() {
   }, []);
 
   return (
-    <SearchResultContainer loadedGnomes={loadedGnomes} />
+    <>
+      <SearchFilters />
+      <SearchResultContainer loadedGnomes={loadedGnomes} />
+    </>
   );
 }

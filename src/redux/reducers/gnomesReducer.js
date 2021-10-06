@@ -7,6 +7,12 @@ export default function gnomesReducer(gnomesList = [], action) {
       newGnomesList = action.data.map((gnome) => gnome);
       break;
 
+    case actionTypes.FILTER_GNOMES:
+      newGnomesList = gnomesList.filter((gnome) => (
+        gnome.name.toLowerCase().includes(action.searchValue.trim())
+      ));
+      break;
+
     case actionTypes.API_ERROR:
       break;
 
