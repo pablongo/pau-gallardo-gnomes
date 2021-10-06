@@ -7,7 +7,7 @@ export default function paginationReducer(
   let newPagination = pagination;
   switch (action.type) {
     case actionTypes.SET_PAGINATION:
-      newPagination = action.data;
+      newPagination = action.pagination;
       break;
 
     default:

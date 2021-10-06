@@ -27,6 +27,11 @@ export function changePage(direction, currentPage, gnomesPerPage) {
           currentPage: currentPage - 1,
           gnomesPerPage,
         };
+      } else {
+        pagination = {
+          currentPage,
+          gnomesPerPage,
+        };
       }
       break;
 
