@@ -19,9 +19,31 @@ export default function Details() {
   }, []);
 
   return (
-    <>
-      <h1>Details Page</h1>
-      <h3>{gnome?.name}</h3>
+    <section>
+      <h2>{gnome.name}</h2>
+      <img src={gnome.thumbnail} alt={gnome.name} />
+      <div>
+        <span>{`Age: ${gnome.age}`}</span>
+        <span>{`Weight: ${gnome.weight}`}</span>
+        <span>{`Height: ${gnome.height}`}</span>
+        <span>{`Hair color: ${gnome.hair_color}`}</span>
+      </div>
+      <div>
+        <h3>Professions:</h3>
+        <ul>
+          {gnome.professions.map((profession) => (
+            <li>{profession}</li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h3>Friends:</h3>
+        <ul>
+          {gnome.friends.map((friend) => (
+            <li>{friend}</li>
+          ))}
+        </ul>
+      </div>
       <Link to="/">
         <button
           type="button"
@@ -29,6 +51,6 @@ export default function Details() {
           Go back
         </button>
       </Link>
-    </>
+    </section>
   );
 }
