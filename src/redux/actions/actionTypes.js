@@ -1,5 +1,7 @@
 export default {
   LOAD_GNOMES: 'LOAD_GNOMES',
 
+  SET_PAGINATION: 'SET_PAGINATION',
+
   API_ERROR: 'API_ERROR',
 };
