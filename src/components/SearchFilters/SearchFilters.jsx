@@ -4,7 +4,7 @@ import { filterGnomes } from '../../redux/actions/actionsCreator';
 
 export default function SearchFilters() {
   const dispatch = useDispatch();
-  const [inputValue, setInputValue] = useState();
+  const [inputValue, setInputValue] = useState('');
 
   function handleInputChange({ target: { value } }) {
     setInputValue(value);
