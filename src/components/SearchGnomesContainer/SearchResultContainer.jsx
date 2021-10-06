@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import { PropTypes } from 'prop-types';
 
 import GnomeListEmpty from '../GnomeListEmpty/GnomeListEmpty';
 import GnomeList from '../GnomeList/GnomeList';
@@ -16,3 +16,7 @@ export default function SearchResultContainer({ loadedGnomes }) {
     </section>
   );
 }
+
+SearchResultContainer.propTypes = {
+  loadedGnomes: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
