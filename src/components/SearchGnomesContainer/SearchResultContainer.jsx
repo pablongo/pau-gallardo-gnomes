@@ -1,8 +1,18 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 
+import GnomeListEmpty from '../GnomeListEmpty/GnomeListEmpty';
+import GnomeList from '../GnomeList/GnomeList';
+
 export default function SearchResultContainer({ loadedGnomes }) {
   return loadedGnomes && (
-    <h1>This is searchResultContainer</h1>
+    <section>
+      <h2>Gnomes</h2>
+      {
+      loadedGnomes.length
+        ? <GnomeList />
+        : <GnomeListEmpty />
+      }
+    </section>
   );
 }
