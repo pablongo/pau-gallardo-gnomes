@@ -5,6 +5,7 @@ import { loadGnomes } from '../../redux/actions/actionsCreator';
 
 import SearchResultContainer from '../../components/SearchGnomesContainer/SearchResultContainer';
 import SearchFilters from '../../components/SearchFilters/SearchFilters';
+import Header from '../../components/Header/Header';
 
 export default function Dashboard() {
   const dispatch = useDispatch();
@@ -16,6 +17,7 @@ export default function Dashboard() {
 
   return (
     <>
+      <Header />
       <SearchFilters />
       <SearchResultContainer loadedGnomes={loadedGnomes} />
     </>
