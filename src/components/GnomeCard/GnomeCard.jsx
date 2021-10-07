@@ -6,10 +6,10 @@ import './GnomeCard.scss';
 
 export default function GnomeCard({ gnome }) {
   return (
-    <Link to={`/detail/${gnome.id}`}>
-      <li data-testid="list-component-0" className="gnome-container">
-        <img className="gnome-container__avatar" src={gnome.thumbnail} alt={gnome.name} />
-        <h3 className="gnome-container__title">{gnome.name}</h3>
+    <Link className="col" to={`/detail/${gnome.id}`}>
+      <li data-testid="list-component-0" className="card shadow-sm">
+        <img className="card-img-top" src={gnome.thumbnail} alt={gnome.name} />
+        <h3 className="card-body card-text">{gnome.name}</h3>
       </li>
     </Link>
   );
