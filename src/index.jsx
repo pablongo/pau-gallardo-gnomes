@@ -11,7 +11,7 @@ import Dashboard from './pages/Dashboard/Dashboard';
 import Details from './pages/Details/Details';
 import NotFound from './pages/NotFound/NotFound';
 
-import './index.css';
+import './index.scss';
 
 ReactDOM.render(
   <React.StrictMode>

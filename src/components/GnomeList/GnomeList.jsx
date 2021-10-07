@@ -17,19 +17,22 @@ export default function GnomeList({ loadedGnomes }) {
 
   return (
     <>
-      <h1>This is GnomeList</h1>
       <PagintationButtons
         loadedGnomes={loadedGnomes}
         currentPage={currentPage}
         gnomesPerPage={gnomesPerPage}
       />
-      <ul data-testid="gnome-list" className="gnome-list-container">
-        {
+      <section className="album py-5 bg-light">
+        <article className="container">
+          <ul data-testid="gnome-list" className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            {
           shownGnomes.map((gnome) => (
-            <GnomeCard key={gnome.name} gnome={gnome} />
+            <GnomeCard key={gnome?.name} gnome={gnome} />
           ))
         }
-      </ul>
+          </ul>
+        </article>
+      </section>
       <PagintationButtons
         loadedGnomes={loadedGnomes}
         currentPage={currentPage}
