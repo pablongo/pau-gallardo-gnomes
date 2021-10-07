@@ -1,4 +1,4 @@
-.details-container{
+.details-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,21 +6,21 @@
     gap: 3rem;
 }
 
-.basics{
-    gap: 10rem;
+.basics {
+    gap: 10vw;
     &__top{
         display: flex;
         align-items: center;
-        gap: 10rem;
+        gap: 10vw;
     }
     &__bottom{
         display: flex;
         justify-content: space-evenly;
-        gap: 10rem;
+        gap: 10vw;
     }
 }
 
-.top{
+.top {
     li{
         margin-bottom: 1rem;
     }
@@ -31,7 +31,7 @@
     }
 }
 
-ul{
+ul {
     list-style: none;
 }
 
@@ -40,11 +40,17 @@ button {
     background-color: #0099cc;
     color: #ffffff;
     padding: 5px 10px;
-  }
+}
   
 button:hover {
     border: 1px solid #0099cc;
     background-color: #00aacc;
     color: #ffffff;
     padding: 5px 10px;
-  }
+}
+
+@media screen and (max-width:600px) {
+    .details-container{
+        zoom: 80%;
+    }
+}
