@@ -18,11 +18,11 @@ This project retrieves data from (https://raw.githubusercontent.com/rrafols/mobi
 * SonarQube
 
 ## Requirements:
-* Retrive data from the URL [x] 
-* UI must not blocked by network connections or long operations [x]
-* Images coming from network should cached to improve performance [x]
-* Full responsiveness [x]
-* I've used boostrap to be more efficient but I also developed Details page with SASS and BEM to probe I can use it [x]
+* Retrive data from the URL &#x2611; 
+* UI must not blocked by network connections or long operations &#x2611;
+* Images coming from network should cached to improve performance &#x2611;
+* Full responsiveness &#x2611;
+* I've used boostrap to be more efficient but I also developed Details page with SASS and BEM to probe I can use it &#x2611;
 
 ## and with more time:
 * I would be recommended to add snapshot testing for every component that is considered DONE.
