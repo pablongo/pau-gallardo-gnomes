@@ -1,14 +1,10 @@
-.gnome-container{
-    display: flex;
-    gap: 30px;
-    margin: 30px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    width: 300px;
-    height: 100px;
-    padding: 30px;
+.gnome-card{
+    text-decoration: inherit;
+    color: inherit;
 
     &__avatar{
-        height: 80px;
-        border-radius: 10px 10px 10px 10px;
+        object-fit: cover;
+        height: 225px;
+        width: auto;
     }
 }

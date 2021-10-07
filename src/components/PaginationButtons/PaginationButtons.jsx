@@ -11,8 +11,9 @@ export default function PagintationButtons({ loadedGnomes, currentPage, gnomesPe
   }
 
   return (
-    <>
+    <nav className="btn-group" role="group" aria-label="Basic example">
       <button
+        className="btn btn-primary"
         data-testid="prev-button"
         disabled={currentPage === 1}
         type="button"
@@ -21,6 +22,7 @@ export default function PagintationButtons({ loadedGnomes, currentPage, gnomesPe
         Prev
       </button>
       <button
+        className="btn btn-primary"
         data-testid="next-button"
         disabled={!loadedGnomes[(currentPage + 1) * gnomesPerPage]}
         type="button"
@@ -28,7 +30,7 @@ export default function PagintationButtons({ loadedGnomes, currentPage, gnomesPe
       >
         Next
       </button>
-    </>
+    </nav>
   );
 }
 

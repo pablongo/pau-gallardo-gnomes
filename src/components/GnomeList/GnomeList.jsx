@@ -17,7 +17,6 @@ export default function GnomeList({ loadedGnomes }) {
 
   return (
     <>
-      <h1>This is GnomeList</h1>
       <PagintationButtons
         loadedGnomes={loadedGnomes}
         currentPage={currentPage}
@@ -28,7 +27,7 @@ export default function GnomeList({ loadedGnomes }) {
           <ul data-testid="gnome-list" className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             {
           shownGnomes.map((gnome) => (
-            <GnomeCard key={gnome.name} gnome={gnome} />
+            <GnomeCard key={gnome?.name} gnome={gnome} />
           ))
         }
           </ul>

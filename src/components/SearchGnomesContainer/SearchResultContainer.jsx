@@ -6,8 +6,7 @@ import GnomeList from '../GnomeList/GnomeList';
 
 export default function SearchResultContainer({ loadedGnomes }) {
   return loadedGnomes && (
-    <section>
-      <h2>Gnomes</h2>
+    <section className="d-flex flex-column">
       {
       loadedGnomes.length
         ? <GnomeList loadedGnomes={loadedGnomes} />
